@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+enum TabViews { case Favorite, Cats }
+
 struct ContentView: View {
+    @State private var selection: TabViews = .Cats
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selection) {
+            CatListView()
+                .tabItem { Image(systemName: "cat") }
+                .tag(TabViews.Cats)
+            
+            FavoriteCatView()
+                .tabItem { Image(systemName: "heart") }
+                .tag(TabViews.Favorite)
         }
-        .padding()
+        .tint(.red)
     }
 }
 

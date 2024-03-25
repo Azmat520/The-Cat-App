@@ -13,6 +13,13 @@
 		2204CD612BB209B000924047 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2204CD602BB209B000924047 /* Preview Assets.xcassets */; };
 		2204CD692BB20A3300924047 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD682BB20A3300924047 /* CatListView.swift */; };
 		2204CD6B2BB20A4100924047 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD6A2BB20A4100924047 /* CatListViewModel.swift */; };
+		2204CD6E2BB20A9400924047 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD6D2BB20A9400924047 /* Cat.swift */; };
+		2204CD712BB20AE800924047 /* AnimalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD702BB20AE800924047 /* AnimalProtocol.swift */; };
+		2204CD732BB20B6E00924047 /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD722BB20B6E00924047 /* ApiRequestProtocol.swift */; };
+		2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD752BB20BB000924047 /* CatApiRequests.swift */; };
+		2204CD792BB20BFB00924047 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD782BB20BFB00924047 /* GlobalFunctions.swift */; };
+		2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */; };
+		2204CD7D2BB20DBD00924047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7C2BB20DBD00924047 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		2204CD602BB209B000924047 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2204CD682BB20A3300924047 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		2204CD6A2BB20A4100924047 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		2204CD6D2BB20A9400924047 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		2204CD702BB20AE800924047 /* AnimalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalProtocol.swift; sourceTree = "<group>"; };
+		2204CD722BB20B6E00924047 /* ApiRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestProtocol.swift; sourceTree = "<group>"; };
+		2204CD752BB20BB000924047 /* CatApiRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApiRequests.swift; sourceTree = "<group>"; };
+		2204CD782BB20BFB00924047 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatView.swift; sourceTree = "<group>"; };
+		2204CD7C2BB20DBD00924047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +69,11 @@
 		2204CD582BB209AF00924047 /* TheCatApp */ = {
 			isa = PBXGroup;
 			children = (
+				2204CD6C2BB20A8B00924047 /* Data */,
+				2204CD742BB20B9E00924047 /* Api */,
+				2204CD6F2BB20ABB00924047 /* Protocol */,
 				2204CD672BB20A2200924047 /* View */,
+				2204CD772BB20BDF00924047 /* Utils */,
 				2204CD592BB209AF00924047 /* TheCatAppApp.swift */,
 				2204CD5B2BB209AF00924047 /* ContentView.swift */,
 				2204CD5D2BB209B000924047 /* Assets.xcassets */,
@@ -77,8 +95,43 @@
 			children = (
 				2204CD682BB20A3300924047 /* CatListView.swift */,
 				2204CD6A2BB20A4100924047 /* CatListViewModel.swift */,
+				2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2204CD6C2BB20A8B00924047 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD6D2BB20A9400924047 /* Cat.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2204CD6F2BB20ABB00924047 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD702BB20AE800924047 /* AnimalProtocol.swift */,
+				2204CD722BB20B6E00924047 /* ApiRequestProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2204CD742BB20B9E00924047 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD752BB20BB000924047 /* CatApiRequests.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2204CD772BB20BDF00924047 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD782BB20BFB00924047 /* GlobalFunctions.swift */,
+				2204CD7C2BB20DBD00924047 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2204CD5C2BB209AF00924047 /* ContentView.swift in Sources */,
+				2204CD7D2BB20DBD00924047 /* Constants.swift in Sources */,
+				2204CD732BB20B6E00924047 /* ApiRequestProtocol.swift in Sources */,
 				2204CD6B2BB20A4100924047 /* CatListViewModel.swift in Sources */,
+				2204CD6E2BB20A9400924047 /* Cat.swift in Sources */,
 				2204CD692BB20A3300924047 /* CatListView.swift in Sources */,
+				2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */,
+				2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */,
 				2204CD5A2BB209AF00924047 /* TheCatAppApp.swift in Sources */,
+				2204CD712BB20AE800924047 /* AnimalProtocol.swift in Sources */,
+				2204CD792BB20BFB00924047 /* GlobalFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +351,13 @@
 				DEVELOPMENT_TEAM = CKPBCWX94W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Cat App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,9 +365,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.example.TheCatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +386,13 @@
 				DEVELOPMENT_TEAM = CKPBCWX94W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Cat App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,9 +400,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.example.TheCatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

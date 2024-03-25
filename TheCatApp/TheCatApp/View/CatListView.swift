@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct CatListView: View {
+    @StateObject var viewModel: CatListViewModel = .init()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ForEach(viewModel.catList) { Text($0.name) }
+        }
+        .onAppear(perform: viewModel.getList)
     }
 }
 
