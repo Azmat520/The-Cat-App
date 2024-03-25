@@ -11,11 +11,22 @@ struct CatListView: View {
     @StateObject var viewModel: CatListViewModel = .init()
     
     var body: some View {
-        AdaptiveView(axis: .vertical) {
-            VStack(spacing: defaultSpacing) {
-                ForEach(viewModel.catList) { ListCard(pet: $0).padding(.horizontal) }
+        NavigationStack {
+            AdaptiveView(axis: .vertical) {
+                LazyVStack(spacing: defaultSpacing) {
+                    ForEach(viewModel.catList) { cat in
+                        NavigationLink(value: cat) {
+                            ListCard(pet: cat)
+                                .padding(.horizontal)
+                        }
+                    }
+                }
+                .onAppear(perform: viewModel.getList)
+                .navigationTitle("The Cat List")
+                .navigationDestination(for: Cat.self) {
+                    CatListDetailView(pet: $0)
+                }
             }
-            .onAppear(perform: viewModel.getList)
         }
     }
 }

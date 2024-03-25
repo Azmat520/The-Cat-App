@@ -21,7 +21,6 @@ struct ContentView: View {
                 .tabItem { Image(systemName: "heart") }
                 .tag(TabViews.Favorite)
         }
-        .tint(.red)
     }
 }
 

@@ -28,6 +28,7 @@
 		2204CD8D2BB2169100924047 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD8C2BB2169100924047 /* ViewExtensions.swift */; };
 		2204CD8F2BB216BB00924047 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD8E2BB216BB00924047 /* ColorExtensions.swift */; };
 		2204CD912BB217B400924047 /* AdaptiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD902BB217B400924047 /* AdaptiveView.swift */; };
+		2204CD932BB218DB00924047 /* CatListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD922BB218DB00924047 /* CatListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		2204CD8C2BB2169100924047 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		2204CD8E2BB216BB00924047 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		2204CD902BB217B400924047 /* AdaptiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveView.swift; sourceTree = "<group>"; };
+		2204CD922BB218DB00924047 /* CatListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				2204CD682BB20A3300924047 /* CatListView.swift */,
 				2204CD6A2BB20A4100924047 /* CatListViewModel.swift */,
 				2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */,
+				2204CD922BB218DB00924047 /* CatListDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */,
 				2204CD8D2BB2169100924047 /* ViewExtensions.swift in Sources */,
 				2204CD5A2BB209AF00924047 /* TheCatAppApp.swift in Sources */,
+				2204CD932BB218DB00924047 /* CatListDetailView.swift in Sources */,
 				2204CD8A2BB2165100924047 /* TemperamentView.swift in Sources */,
 				2204CD712BB20AE800924047 /* AnimalProtocol.swift in Sources */,
 				2204CD792BB20BFB00924047 /* GlobalFunctions.swift in Sources */,
