@@ -15,12 +15,8 @@ struct ListCard: View {
     var body: some View {
         VStack {
             ListCardImage(url: pet.image.url)
-                .overlay(alignment: .topTrailing) {
-                    Image(systemName: "heart" + (isFavorite ? ".fill" : ""))
-                        .font(.title)
-                        .padding()
-                        .foregroundStyle(.red)
-                        .onTapGesture { toggleFavorite(pet) }
+                .favoritable(isFavorite: isFavorite) {
+                    toggleFavorite(pet)
                 }
             
             VStack(alignment: .leading, spacing: 10) {

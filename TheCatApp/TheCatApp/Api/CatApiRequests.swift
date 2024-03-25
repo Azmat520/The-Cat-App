@@ -13,16 +13,7 @@ struct CatApiRequests: CatApiProtocol {
         let path = baseUrl + "/breeds/?page=\(page)&limit=\(limitItems)"
         guard let url = URL(string: path) else { return nil }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        if let token = KeychainManager.getData(forKey: apiTokenKey) {
-            request.setValue(token, forHTTPHeaderField: "x-api-key")
-        } else {
-            /// Here should come a fetch call to refresh and save the token
-            /// Or an alert that notice user.
-        }
+        let request = getDefaultRequest(url: url, httpMethod: "GET")
         
         return performRequest(request, onSuccess: onSuccess, onError: onError)
     }

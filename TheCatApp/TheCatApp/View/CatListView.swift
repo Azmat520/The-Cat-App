@@ -13,8 +13,8 @@ struct CatListView: View {
     var body: some View {
         NavigationStack {
             AdaptiveView(axis: .vertical) {
-                LazyVStack(spacing: defaultSpacing) {
-                    ForEach(viewModel.filteredList) { cat in
+                VStack(spacing: defaultSpacing) {
+                    ForEach(viewModel.filteredList, id: \.self) { cat in
                         NavigationLink(value: cat) {
                             ListCard(pet: cat,
                                      toggleFavorite: viewModel.toggleFavorite(_:),

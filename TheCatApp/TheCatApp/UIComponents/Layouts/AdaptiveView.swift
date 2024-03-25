@@ -11,16 +11,13 @@ struct AdaptiveView<Content: View>: View {
     var axis: Axis.Set
     var content: Content
     
-    init(axis: Axis.Set, @ViewBuilder content: @escaping () -> Content)
-    {
+    init(axis: Axis.Set, @ViewBuilder content: @escaping () -> Content) {
         self.axis = axis
         self.content = content()
     }
     
-    var body: some View
-    {
-        ViewThatFits(in: axis)
-        {
+    var body: some View {
+        ViewThatFits(in: axis) {
             content
             ScrollView { content }
         }

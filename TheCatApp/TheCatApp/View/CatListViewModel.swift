@@ -23,8 +23,6 @@ class CatListViewModel: ObservableObject {
         return catList.filter { $0.name.localizedCaseInsensitiveContains(searchTerm) }
     }
     
-   
-    
     func getList() {
         isLoading = true
         cancellable?.cancel() /// Cancel previous fetch call if its still going on.
@@ -54,7 +52,6 @@ class CatListViewModel: ObservableObject {
 // MARK: - Private functions
 extension CatListViewModel {
     private func initList(_ cats: [Cat]) {
-        catList.removeAll()
         catList = cats
         isLoading = false
     }

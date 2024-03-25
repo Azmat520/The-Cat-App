@@ -29,6 +29,7 @@
 		2204CD8F2BB216BB00924047 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD8E2BB216BB00924047 /* ColorExtensions.swift */; };
 		2204CD912BB217B400924047 /* AdaptiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD902BB217B400924047 /* AdaptiveView.swift */; };
 		2204CD932BB218DB00924047 /* CatListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD922BB218DB00924047 /* CatListDetailView.swift */; };
+		2204CD982BB225AD00924047 /* FavoritableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD972BB225AD00924047 /* FavoritableViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		2204CD8E2BB216BB00924047 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		2204CD902BB217B400924047 /* AdaptiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveView.swift; sourceTree = "<group>"; };
 		2204CD922BB218DB00924047 /* CatListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListDetailView.swift; sourceTree = "<group>"; };
+		2204CD972BB225AD00924047 /* FavoritableViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritableViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				2204CD682BB20A3300924047 /* CatListView.swift */,
-				2204CD6A2BB20A4100924047 /* CatListViewModel.swift */,
 				2204CD922BB218DB00924047 /* CatListDetailView.swift */,
+				2204CD6A2BB20A4100924047 /* CatListViewModel.swift */,
 				2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */,
 			);
 			path = View;
@@ -159,6 +161,7 @@
 		2204CD802BB2148300924047 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2204CD962BB2259000924047 /* ViewModifier */,
 				2204CD822BB214A300924047 /* Layouts */,
 				2204CD812BB2149800924047 /* Widgets */,
 			);
@@ -191,6 +194,14 @@
 				2204CD8E2BB216BB00924047 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2204CD962BB2259000924047 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD972BB225AD00924047 /* FavoritableViewModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				2204CD6E2BB20A9400924047 /* Cat.swift in Sources */,
 				2204CD692BB20A3300924047 /* CatListView.swift in Sources */,
 				2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */,
+				2204CD982BB225AD00924047 /* FavoritableViewModifier.swift in Sources */,
 				2204CD7F2BB2118D00924047 /* KeychainManager.swift in Sources */,
 				2204CD862BB2150D00924047 /* ListCard.swift in Sources */,
 				2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */,
