@@ -16,7 +16,13 @@ struct CatApiRequests: CatApiProtocol {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(apiToken, forHTTPHeaderField: "x-api-key")
+        
+        if let token = KeychainManager.getData(forKey: apiTokenKey) {
+            request.setValue(token, forHTTPHeaderField: "x-api-key")
+        } else {
+            /// Here should come a fetch call to refresh and save the token
+            /// Or an alert that notice user.
+        }
         
         return performRequest(request, onSuccess: onSuccess, onError: onError)
     }

@@ -20,6 +20,7 @@
 		2204CD792BB20BFB00924047 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD782BB20BFB00924047 /* GlobalFunctions.swift */; };
 		2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */; };
 		2204CD7D2BB20DBD00924047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7C2BB20DBD00924047 /* Constants.swift */; };
+		2204CD7F2BB2118D00924047 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7E2BB2118D00924047 /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		2204CD782BB20BFB00924047 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatView.swift; sourceTree = "<group>"; };
 		2204CD7C2BB20DBD00924047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2204CD7E2BB2118D00924047 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				2204CD782BB20BFB00924047 /* GlobalFunctions.swift */,
 				2204CD7C2BB20DBD00924047 /* Constants.swift */,
+				2204CD7E2BB2118D00924047 /* KeychainManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				2204CD6E2BB20A9400924047 /* Cat.swift in Sources */,
 				2204CD692BB20A3300924047 /* CatListView.swift in Sources */,
 				2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */,
+				2204CD7F2BB2118D00924047 /* KeychainManager.swift in Sources */,
 				2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */,
 				2204CD5A2BB209AF00924047 /* TheCatAppApp.swift in Sources */,
 				2204CD712BB20AE800924047 /* AnimalProtocol.swift in Sources */,

@@ -10,8 +10,8 @@ import Foundation
 // MARK: URL's
 let baseUrl = "https://api.thecatapi.com/v1"
 
-// MARK: Api token
-let apiToken = "live_9IQXIiOo591v0LieoXaVWTNHqZDVbqlHBKHsNUkuf1iZZOv3rLplY5vQswooYRET"
+// MARK: Keychain keys
+let apiTokenKey = "com.catapi.app"
 
 // MARK: Fetch variables
 let limitItems = "12"
