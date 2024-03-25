@@ -21,6 +21,13 @@
 		2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */; };
 		2204CD7D2BB20DBD00924047 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7C2BB20DBD00924047 /* Constants.swift */; };
 		2204CD7F2BB2118D00924047 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD7E2BB2118D00924047 /* KeychainManager.swift */; };
+		2204CD842BB214C100924047 /* ListCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD832BB214C100924047 /* ListCardImage.swift */; };
+		2204CD862BB2150D00924047 /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD852BB2150D00924047 /* ListCard.swift */; };
+		2204CD882BB215DA00924047 /* ListCardInfoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD872BB215DA00924047 /* ListCardInfoLayout.swift */; };
+		2204CD8A2BB2165100924047 /* TemperamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD892BB2165100924047 /* TemperamentView.swift */; };
+		2204CD8D2BB2169100924047 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD8C2BB2169100924047 /* ViewExtensions.swift */; };
+		2204CD8F2BB216BB00924047 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD8E2BB216BB00924047 /* ColorExtensions.swift */; };
+		2204CD912BB217B400924047 /* AdaptiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204CD902BB217B400924047 /* AdaptiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +46,13 @@
 		2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatView.swift; sourceTree = "<group>"; };
 		2204CD7C2BB20DBD00924047 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2204CD7E2BB2118D00924047 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		2204CD832BB214C100924047 /* ListCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardImage.swift; sourceTree = "<group>"; };
+		2204CD852BB2150D00924047 /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
+		2204CD872BB215DA00924047 /* ListCardInfoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardInfoLayout.swift; sourceTree = "<group>"; };
+		2204CD892BB2165100924047 /* TemperamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperamentView.swift; sourceTree = "<group>"; };
+		2204CD8C2BB2169100924047 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		2204CD8E2BB216BB00924047 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		2204CD902BB217B400924047 /* AdaptiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,7 @@
 				2204CD742BB20B9E00924047 /* Api */,
 				2204CD6F2BB20ABB00924047 /* Protocol */,
 				2204CD672BB20A2200924047 /* View */,
+				2204CD802BB2148300924047 /* UIComponents */,
 				2204CD772BB20BDF00924047 /* Utils */,
 				2204CD592BB209AF00924047 /* TheCatAppApp.swift */,
 				2204CD5B2BB209AF00924047 /* ContentView.swift */,
@@ -130,11 +145,49 @@
 		2204CD772BB20BDF00924047 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2204CD8B2BB2168500924047 /* Extensions */,
 				2204CD782BB20BFB00924047 /* GlobalFunctions.swift */,
 				2204CD7C2BB20DBD00924047 /* Constants.swift */,
 				2204CD7E2BB2118D00924047 /* KeychainManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2204CD802BB2148300924047 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD822BB214A300924047 /* Layouts */,
+				2204CD812BB2149800924047 /* Widgets */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		2204CD812BB2149800924047 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD852BB2150D00924047 /* ListCard.swift */,
+				2204CD832BB214C100924047 /* ListCardImage.swift */,
+				2204CD872BB215DA00924047 /* ListCardInfoLayout.swift */,
+				2204CD892BB2165100924047 /* TemperamentView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		2204CD822BB214A300924047 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD902BB217B400924047 /* AdaptiveView.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		2204CD8B2BB2168500924047 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2204CD8C2BB2169100924047 /* ViewExtensions.swift */,
+				2204CD8E2BB216BB00924047 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,14 +262,21 @@
 			files = (
 				2204CD5C2BB209AF00924047 /* ContentView.swift in Sources */,
 				2204CD7D2BB20DBD00924047 /* Constants.swift in Sources */,
+				2204CD882BB215DA00924047 /* ListCardInfoLayout.swift in Sources */,
+				2204CD912BB217B400924047 /* AdaptiveView.swift in Sources */,
 				2204CD732BB20B6E00924047 /* ApiRequestProtocol.swift in Sources */,
+				2204CD842BB214C100924047 /* ListCardImage.swift in Sources */,
+				2204CD8F2BB216BB00924047 /* ColorExtensions.swift in Sources */,
 				2204CD6B2BB20A4100924047 /* CatListViewModel.swift in Sources */,
 				2204CD6E2BB20A9400924047 /* Cat.swift in Sources */,
 				2204CD692BB20A3300924047 /* CatListView.swift in Sources */,
 				2204CD7B2BB20CCB00924047 /* FavoriteCatView.swift in Sources */,
 				2204CD7F2BB2118D00924047 /* KeychainManager.swift in Sources */,
+				2204CD862BB2150D00924047 /* ListCard.swift in Sources */,
 				2204CD762BB20BB000924047 /* CatApiRequests.swift in Sources */,
+				2204CD8D2BB2169100924047 /* ViewExtensions.swift in Sources */,
 				2204CD5A2BB209AF00924047 /* TheCatAppApp.swift in Sources */,
+				2204CD8A2BB2165100924047 /* TemperamentView.swift in Sources */,
 				2204CD712BB20AE800924047 /* AnimalProtocol.swift in Sources */,
 				2204CD792BB20BFB00924047 /* GlobalFunctions.swift in Sources */,
 			);

@@ -11,10 +11,12 @@ struct CatListView: View {
     @StateObject var viewModel: CatListViewModel = .init()
     
     var body: some View {
-        VStack {
-            ForEach(viewModel.catList) { Text($0.name) }
+        AdaptiveView(axis: .vertical) {
+            VStack(spacing: defaultSpacing) {
+                ForEach(viewModel.catList) { ListCard(pet: $0).padding(.horizontal) }
+            }
+            .onAppear(perform: viewModel.getList)
         }
-        .onAppear(perform: viewModel.getList)
     }
 }
 
