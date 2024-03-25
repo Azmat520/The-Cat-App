@@ -1,6 +1,6 @@
 # The-Cat-App
 
-**Assessment:** Create an iOS application written in Swift that fetches a list of cats from an API endpoint and displays it in a nice looking list using up-to-date common iOS UI practices.
+**Assessment:** Create an iOS application written in Swift that fetches a list of cats from an API endpoint and displays it in a nice looking list using up-to-date common iOS UI practices.<br>
 **Solution:** A SwiftUI app with Favorite, List and Detail screen.
 
 Technical decisions with trade offs: <br>
