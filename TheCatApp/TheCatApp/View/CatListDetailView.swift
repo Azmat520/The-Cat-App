@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/// Possible future enhancement.
+/// Add learn more button to openURL to its wiki
+
 struct CatListDetailView: View {
     let pet: AnimalProtocol
     var body: some View {

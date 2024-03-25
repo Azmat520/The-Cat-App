@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Future enhancement add posiblities to filter the list based on the temperament.
+
 struct CatListView: View {
     @EnvironmentObject var viewModel: CatListViewModel
     
