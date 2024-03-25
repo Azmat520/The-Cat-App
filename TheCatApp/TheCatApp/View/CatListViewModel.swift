@@ -10,6 +10,11 @@ import Combine
 
 class CatListViewModel: ObservableObject {
     @Published var catList: [Cat] = []
+    @Published var searchTerm: String = emptyString
+    var filteredList: [Cat] {
+        guard !searchTerm.isEmpty else { return catList }
+        return catList.filter { $0.name.localizedCaseInsensitiveContains(searchTerm) }
+    }
     
     private var cancellable: AnyCancellable?
     private var page: Int = 1

@@ -18,6 +18,7 @@ let limitItems = "12"
 
 // MARK: View constants
 let defaultSpacing: CGFloat = 16.0
+let emptyString = ""
 
 // MARK: Dummy object for previews
 let DefaultCatObject = Cat(id: "Short",

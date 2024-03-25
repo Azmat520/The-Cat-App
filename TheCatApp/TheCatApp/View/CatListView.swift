@@ -14,7 +14,7 @@ struct CatListView: View {
         NavigationStack {
             AdaptiveView(axis: .vertical) {
                 LazyVStack(spacing: defaultSpacing) {
-                    ForEach(viewModel.catList) { cat in
+                    ForEach(viewModel.filteredList) { cat in
                         NavigationLink(value: cat) {
                             ListCard(pet: cat)
                                 .padding(.horizontal)
@@ -26,6 +26,7 @@ struct CatListView: View {
                 .navigationDestination(for: Cat.self) {
                     CatListDetailView(pet: $0)
                 }
+                .searchable(text: $viewModel.searchTerm, prompt: "Search your favorite cat")
             }
         }
     }
