@@ -9,10 +9,19 @@ import SwiftUI
 
 struct ListCard: View {
     let pet: AnimalProtocol
+    let toggleFavorite: (AnimalProtocol) -> Void
+    var isFavorite: Bool
     
     var body: some View {
         VStack {
             ListCardImage(url: pet.image.url)
+                .overlay(alignment: .topTrailing) {
+                    Image(systemName: "heart" + (isFavorite ? ".fill" : ""))
+                        .font(.title)
+                        .padding()
+                        .foregroundStyle(.red)
+                        .onTapGesture { toggleFavorite(pet) }
+                }
             
             VStack(alignment: .leading, spacing: 10) {
                 ListCardInfoLayout(label: "Name:", value: pet.name)
@@ -37,5 +46,7 @@ struct ListCard: View {
                                                       height: 966,
                                                       url: "https://cdn2.thecatapi.com/images/5iYq9NmT1.jpg"),
                              description: "random text",
-                             temperament: "Affectionate, Dependent, Gentle, Intelligent, Playful, Hello, Test, mmooi")) }
+                             temperament: "Affectionate, Dependent, Gentle, Intelligent, Playful, Hello, Test, mmooi"),
+                    toggleFavorite: {_ in},
+                    isFavorite: false) }
 #endif

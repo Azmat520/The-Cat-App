@@ -10,16 +10,19 @@ import SwiftUI
 enum TabViews { case Favorite, Cats }
 
 struct ContentView: View {
-    @State private var selection: TabViews = .Cats
+    @StateObject private var viewModel = CatListViewModel()
+    
     var body: some View {
-        TabView(selection: $selection) {
-            CatListView()
-                .tabItem { Image(systemName: "cat") }
-                .tag(TabViews.Cats)
-            
+        TabView(selection: $viewModel.selection) {
             FavoriteCatView()
+                .environmentObject(viewModel)
                 .tabItem { Image(systemName: "heart") }
                 .tag(TabViews.Favorite)
+            
+            CatListView()
+                .environmentObject(viewModel)
+                .tabItem { Image(systemName: "cat") }
+                .tag(TabViews.Cats)
         }
     }
 }

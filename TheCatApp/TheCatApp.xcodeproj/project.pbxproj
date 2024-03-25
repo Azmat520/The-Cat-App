@@ -114,8 +114,8 @@
 			children = (
 				2204CD682BB20A3300924047 /* CatListView.swift */,
 				2204CD6A2BB20A4100924047 /* CatListViewModel.swift */,
-				2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */,
 				2204CD922BB218DB00924047 /* CatListDetailView.swift */,
+				2204CD7A2BB20CCB00924047 /* FavoriteCatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

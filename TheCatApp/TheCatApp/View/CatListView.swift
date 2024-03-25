@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatListView: View {
-    @StateObject var viewModel: CatListViewModel = .init()
+    @EnvironmentObject var viewModel: CatListViewModel
     
     var body: some View {
         NavigationStack {
@@ -16,7 +16,9 @@ struct CatListView: View {
                 LazyVStack(spacing: defaultSpacing) {
                     ForEach(viewModel.filteredList) { cat in
                         NavigationLink(value: cat) {
-                            ListCard(pet: cat)
+                            ListCard(pet: cat,
+                                     toggleFavorite: viewModel.toggleFavorite(_:),
+                                     isFavorite: viewModel.isFavorite(cat))
                                 .padding(.horizontal)
                         }
                     }
@@ -27,11 +29,15 @@ struct CatListView: View {
                     CatListDetailView(pet: $0)
                 }
                 .searchable(text: $viewModel.searchTerm, prompt: "Search your favorite cat")
+                .overlay {
+                    /// Due to lack of time, added progress view instead of shimmer effect for loading.
+                    if viewModel.isLoading { ProgressView() }
+                }
             }
         }
     }
 }
 
 #if DEBUG
-#Preview { CatListView() }
+#Preview { CatListView().environmentObject(CatListViewModel()) }
 #endif
